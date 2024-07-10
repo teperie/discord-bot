@@ -3,6 +3,7 @@
 .vscode
 .env
 .env.local
+.DS_store
 package-lock.json
 yarn.lock
 
