@@ -1,5 +1,3 @@
-import "@discordx/plugin-ytdl-player";
-
 import { dirname, importx } from "@discordx/importer";
 import type { Interaction, Message } from "discord.js";
 import { IntentsBitField } from "discord.js";
