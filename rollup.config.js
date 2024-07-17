@@ -6,7 +6,7 @@ import { nodeExternals } from 'rollup-plugin-node-externals'
 export default {
   input: 'src/main.ts',
   output: {
-    file: 'dist/index.js',
+    file: 'dist/app.js',
     format: 'es',
     sourcemap: true,
   },
