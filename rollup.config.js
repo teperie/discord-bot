@@ -10,10 +10,5 @@ export default {
     format: 'es',
     sourcemap: true,
   },
-  plugins: [
-    nodeExternals(),
-    typescript(),
-    nodeResolve(),
-    terser(), // 코드 압축을 위한 플러그인
-  ],
+  plugins: [nodeExternals(), typescript(), nodeResolve(), terser()],
 }
