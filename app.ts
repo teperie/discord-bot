@@ -1,13 +1,14 @@
-import { dirname, importx } from '@discordx/importer'
+// import { dirname, importx } from '@discordx/importer'
 import type { Interaction, Message } from 'discord.js'
 import { IntentsBitField } from 'discord.js'
 import { Client } from 'discordx'
 
-import asdf from './src'
+import dotenv from 'dotenv'
+dotenv.config()
 
 export const bot = new Client({
   // To use only guild command
-  // botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
+  botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
 
   // Discord intents
   intents: [
@@ -59,7 +60,7 @@ async function run() {
   // await importx(__dirname + "/{events,commands}/**/*.{ts,js}");
 
   // The following syntax should be used in the ECMAScript environment
-  await importx(`${dirname(import.meta.url)}/{events,commands}/**/*.{ts,js}`)
+  // await importx(`${dirname(import.meta.url)}/{events,commands}/**/*.{ts,js}`)
 
   // Let's start the bot
   if (!process.env.BOT_TOKEN) {
